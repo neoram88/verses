@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  background: linear-gradient(#15161D,#0F172B);
+  padding: 1em;
+  font-family: QuickSand;
+}
+
+.App > svg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+
+.searchBar{
+  width: 100%;
+  background: transparent;
+  border-style: none;
+  border-bottom: 1pt solid wheat;
+}
+
+.btn-xl {
+  font-size: 1.7em!important;
+}
+
+.btn.btn-link.active   {
+  text-shadow: #FFF 0px 0px 20px;
+}
+
+// .btn-link:disabled{
+//   text-shadow: #FFF 0px 0px 20px;
+// }
