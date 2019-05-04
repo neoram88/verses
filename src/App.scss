@@ -3,6 +3,8 @@
   background: linear-gradient(#15161D,#0F172B);
   padding: 1em;
   font-family: QuickSand;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 0.45px;
 }
 
 .App > svg{

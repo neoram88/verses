@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import HeaderComponent from './components/HeaderComponent/HeaderComponent'
 import SectionBarComponent from './components/SectionBarComponent/SectionBarComponent';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Authors from './pages/Authors';
+import Poems from './pages/Poems';
+import Favourites from './pages/Favourites';
 
 class App extends Component {
 
@@ -15,9 +17,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Router>
         <HeaderComponent></HeaderComponent>
         <SectionBarComponent></SectionBarComponent>
         <input className="searchBar" placeholder="I'm required" required />
+          <Switch>
+            <Route exact path='/authors' component={Authors} />
+            <Route exact path='/poems' component={Poems} />
+            <Route exact path='/favs' component={Favourites} />
+          </Switch>
+        </Router>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import './SectionBarComponent.scss';
 
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
+import {NavLink} from 'react-router-dom';
 
 
 export default class SectionBarComponent extends React.Component{
@@ -43,9 +44,15 @@ export default class SectionBarComponent extends React.Component{
     render(){
         return(
             <ButtonGroup className="sectionBar">
-                <Button size="xl" variant="link" active={this.state.authorsSelected} onClick={this.loadAuthors}>Authors</Button>
-                <Button size="xl" variant="link" active={this.state.poemsSelected} onClick={this.loadPoems}>Poems</Button>
-                <Button size="xl" variant="link" active={this.state.favsSelected} onClick={this.loadFavs}>Favourites</Button>
+            <NavLink to='/authors' activeClassName="selectedLink">
+                <Button size="lg" variant="NavLink" >Authors</Button>
+            </NavLink>
+            <NavLink to='/poems' activeClassName="selectedLink">
+                <Button size="lg" variant="NavLink">Poems</Button>
+            </NavLink>
+            <NavLink to='/favs' activeClassName="selectedLink">    
+                <Button size="lg" variant="NavLink">Favourites</Button>
+            </NavLink>
             </ButtonGroup>
         )
     }

@@ -3,27 +3,30 @@
     // display: flex;
     // flex-flow: row;
     // justify-content: space-between;
-    width: 100%;
+    // width: 100%;
 }
-.sectionBar > button:nth-child(1){
+.sectionBar > a:nth-child(1)>button{
     color: #A457DE;
 }
 
-.sectionBar > button:nth-child(2){
+.sectionBar > a:nth-child(2)>button{
     color: #00BB84;
 }
 
-.sectionBar > button:nth-child(3){
+.sectionBar > a:nth-child(3)>button{
     color: #FF4E50;
 }
 
-.sectionBar > button{
-    text-decoration: none!important;
+.sectionBar > a{
+    text-decoration: none;
     transition: ease-in;
 }
 
 
-.sectionBar > button:not(.active){
+.sectionBar > a{
     opacity: 0.4;
+}
+.selectedLink{
+    opacity: 1!important;
 }
 
