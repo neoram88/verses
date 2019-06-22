@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Authors.scss';
 
 export default class Authors extends React.Component{
 
@@ -24,10 +25,13 @@ static authors=[];
 
   render(){
     let authorsList = this.state.authors?this.state.authors.map((item, index)=>
-      <div key={index}>{item}</div>
+      <div className="authorItem" key={index}>{item}</div>
     ):<div>Loading Data</div>
       return(
-        authorsList
+        <div className="authorsContent">
+          {authorsList}
+        </div>
+        
       )
   }
 }
